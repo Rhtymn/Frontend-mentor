@@ -32,39 +32,121 @@
       }
 
       #result #score {
-        /* background-image: linear-gradient(
-          to bottom,
-          hsla(252, 100%, 67%, 0),
-          hsla(256, 72%, 46%, 0.9)
-        ); */
         background-color: hsla(224, 30%, 27%, 0.5);
       }
     </style>
   </head>
-  <body>
-    <div class="flex flex-col">
+  <body
+    class="w-full h-full relative flex flex-row justify-center items-center"
+  >
+    <div
+      class="flex flex-col max-w-[40rem] h-[100dvh] xl:shadow-xl xl:h-[28rem] xl:flex-row xl:rounded-3xl xl:overflow-hidden xl:translate-y-[50%]"
+    >
       <!-- RESULT SECTION -->
       <section
         id="result"
-        class="flex flex-col text-center min-h-[20rem] rounded-b-[1.9rem] text-white py-4 px-14"
+        class="flex flex-col text-center min-h-[20rem] rounded-b-[1.9rem] text-white py-4 px-14 xl:flex-initial xl:w-[50%] xl:py-8 xl:px-18"
       >
-        <h1 class="mb-4">Your Result</h1>
+        <h1 class="mb-4 xl:mb-8">Your Result</h1>
         <!-- SCORE -->
         <div
           id="score"
-          class="rounded-full w-[7.6rem] h-[7.6rem] mx-auto text-center flex flex-col items-center justify-center mb-4"
+          class="rounded-full w-[7.6rem] h-[7.6rem] mx-auto text-center flex flex-col items-center justify-center mb-4 xl:mb-8 xl:w-[8rem] xl:h-[8rem]"
         >
           <span class="text-[2.5em]">76</span>
           <span class="text-[0.6em]" style="color: hsla(0, 0%, 100%, 0.6)"
             >of 100</span
           >
         </div>
-        <span class="text-[1.3rem] font-bold mb-2">Great</span>
+        <span class="text-[1.3rem] font-bold mb-2 xl:mb-4">Great</span>
         <p class="text-[0.9rem]" style="color: hsla(0, 0%, 100%, 0.8)">
           You scored higher than 65% of the people who have taken these tests.
         </p>
       </section>
-      <section></section>
+
+      <!-- SUMMARY SECTION -->
+      <section class="px-6 py-4 xl:flex-1">
+        <h1 class="mb-4 font-bold">Summary</h1>
+        <!-- ITEM -->
+        <div
+          class="flex flex-row justify-between px-3 py-4 rounded-lg mb-4"
+          style="background-color: hsla(0, 100%, 67%, 0.05)"
+        >
+          <!-- Item icon & title -->
+          <div class="flex flex-row" style="color: hsl(0, 100%, 67%)">
+            <img src="./assets/images/icon-reaction.svg" class="mr-3" />
+            <span>Reaction</span>
+          </div>
+
+          <!-- Item score -->
+          <div>
+            <span class="font-bold">80</span>
+            <span style="color: hsla(0, 0%, 0%, 0.5)">/ 100</span>
+          </div>
+        </div>
+
+        <!-- ITEM -->
+        <div
+          class="flex flex-row justify-between px-3 py-4 rounded-lg mb-4"
+          style="background-color: hsla(39, 100%, 56%, 0.05)"
+        >
+          <!-- Item icon & title -->
+          <div class="flex flex-row" style="color: hsl(39, 100%, 56%)">
+            <img src="./assets/images/icon-memory.svg" class="mr-3" />
+            <span>Memory</span>
+          </div>
+
+          <!-- Item score -->
+          <div>
+            <span class="font-bold">92</span>
+            <span style="color: hsla(0, 0%, 0%, 0.5)">/ 100</span>
+          </div>
+        </div>
+
+        <!-- ITEM -->
+        <div
+          class="flex flex-row justify-between px-3 py-4 rounded-lg mb-4"
+          style="background-color: hsla(166, 100%, 37%, 0.05)"
+        >
+          <!-- Item icon & title -->
+          <div class="flex flex-row" style="color: hsl(166, 100%, 37%)">
+            <img src="./assets/images/icon-verbal.svg" class="mr-3" />
+            <span>Verbal</span>
+          </div>
+
+          <!-- Item score -->
+          <div>
+            <span class="font-bold">61</span>
+            <span style="color: hsla(0, 0%, 0%, 0.5)">/ 100</span>
+          </div>
+        </div>
+
+        <!-- ITEM -->
+        <div
+          class="flex flex-row justify-between px-3 py-4 rounded-lg mb-4"
+          style="background-color: hsla(234, 85%, 45%, 0.05)"
+        >
+          <!-- Item icon & title -->
+          <div class="flex flex-row" style="color: hsl(234, 85%, 45%)">
+            <img src="./assets/images/icon-visual.svg" class="mr-3" />
+            <span>Visual</span>
+          </div>
+
+          <!-- Item score -->
+          <div>
+            <span class="font-bold">72</span>
+            <span style="color: hsla(0, 0%, 0%, 0.5)">/ 100</span>
+          </div>
+        </div>
+
+        <!-- BUTTON -->
+        <button
+          class="text-center w-full text-white rounded-3xl py-3 mt-3"
+          style="background-color: hsl(224, 30%, 27%)"
+        >
+          Continue
+        </button>
+      </section>
     </div>
   </body>
 </html>
